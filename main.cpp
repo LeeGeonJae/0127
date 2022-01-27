@@ -13,10 +13,12 @@ int main()
 {
 	int InventoryCount = 10;
 
+	cin >> InventoryCount;
+
 	//container, 동적 배열
 	vector<Weapon*> Inventory;
 
-	for (int i = 0; i < 10; ++i)
+	for (int i = 0; i < InventoryCount; ++i)
 	{
 		int Type = rand() % 3;
 		switch (Type)
@@ -33,26 +35,17 @@ int main()
 		}
 	}
 
-	for (int i = 0; i < 10; ++i)
+	for (int i = 0; i < InventoryCount; ++i)
 	{
 		Inventory[i]->Attack();
-//		Gun* Item1 = dynamic_cast<Gun*>(Inventory[i]);
-//		if (Item1)
-//		{
-//			Item1->Shot();
-//		}
-//
-//		Sword* Item2 = dynamic_cast<Sword*>(Inventory[i]);
-//		if (Item2)
-//		{
-//			Item2->Pierce();
-//		}
-//		Club* Item3 = dynamic_cast<Club*>(Inventory[i]);
-//		
-//		if (Item3)
-//		{
-//			Item3->Swing();
-//		}
 	}
+
+	for (int i = 0; i < InventoryCount; ++i)
+	{
+		delete Inventory[i];
+	}
+
+	Inventory.clear();
+
 	return 0;
 }

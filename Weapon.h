@@ -15,6 +15,7 @@ public:
 	Weapon();
 	virtual ~Weapon();
 
+	//자식 클래스에서 재정의 가능함.
 	virtual void Attack();
 
 	//0: 금속

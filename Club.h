@@ -10,12 +10,15 @@ public:
     Club();
     virtual ~Club();
 
-    void Swing();
 
-    void Attack() override
+    virtual void Attack() override
     {
+        Weapon::Attack();
         Swing();
     }
+
+protected:
+    virtual void Swing();
 
 };
 
