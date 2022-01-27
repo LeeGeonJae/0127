@@ -22,7 +22,7 @@ int main()
 		switch (Type)
 		{
 		case 0:
-			Inventory.push_back(new Sword());
+			Inventory.push_back(new Gun());
 			break;
 		case 1:
 			Inventory.push_back(new Sword());

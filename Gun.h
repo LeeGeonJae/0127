@@ -17,6 +17,11 @@ public:
 	int Bullet;
 
 	void Shot();
+
+	void Attack() override
+	{
+		Shot();
+	}
 };
 
 #endif

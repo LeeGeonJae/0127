@@ -11,6 +11,12 @@ public:
     virtual ~Club();
 
     void Swing();
+
+    void Attack() override
+    {
+        Swing();
+    }
+
 };
 
 #endif

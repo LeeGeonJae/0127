@@ -11,6 +11,12 @@ public:
     virtual ~Sword();
 
     void Pierce();
+
+    void Attack() override
+    {
+        Pierce();
+    }
+
 };
 
 #endif
