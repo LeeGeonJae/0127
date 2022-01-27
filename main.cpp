@@ -11,26 +11,48 @@ using namespace std;
 
 int main()
 {
-//	Weapon* Inventory[3];
-//	Inventory[0] = new Gun();
-//	Inventory[1] = new Sword();
-//	Inventory[2] = new Club();
+	int InventoryCount = 10;
 
 	//container, 동적 배열
 	vector<Weapon*> Inventory;
 
-	Inventory.push_back(new Gun());
-	Inventory.push_back(new Sword());
-	Inventory.push_back(new Club());
+	for (int i = 0; i < 10; ++i)
+	{
+		int Type = rand() % 3;
+		switch (Type)
+		{
+		case 0:
+			Inventory.push_back(new Sword());
+			break;
+		case 1:
+			Inventory.push_back(new Sword());
+			break;
+		case 2:
+			Inventory.push_back(new Club());
+			break;
+		}
+	}
 
-	Gun* Item1 = dynamic_cast<Gun*>(Inventory[0]);
-	Item1->Shot();
-
-	Sword* Item2 = dynamic_cast<Sword*>(Inventory[1]);
-	Item2->Pierce();
-
-	Club* Item3 = dynamic_cast<Club*>(Inventory[2]);
-	Item3->Swing();
-
+	for (int i = 0; i < 10; ++i)
+	{
+		Inventory[i]->Attack();
+//		Gun* Item1 = dynamic_cast<Gun*>(Inventory[i]);
+//		if (Item1)
+//		{
+//			Item1->Shot();
+//		}
+//
+//		Sword* Item2 = dynamic_cast<Sword*>(Inventory[i]);
+//		if (Item2)
+//		{
+//			Item2->Pierce();
+//		}
+//		Club* Item3 = dynamic_cast<Club*>(Inventory[i]);
+//		
+//		if (Item3)
+//		{
+//			Item3->Swing();
+//		}
+	}
 	return 0;
 }

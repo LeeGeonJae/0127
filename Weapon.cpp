@@ -13,3 +13,8 @@ Weapon::~Weapon()
 {
 	cout << "Weapon 파괴자" << endl;
 }
+
+void Weapon::Attack()
+{
+	cout << "무기 공격" << endl;
+}

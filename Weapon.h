@@ -15,6 +15,8 @@ public:
 	Weapon();
 	virtual ~Weapon();
 
+	void Attack();
+
 	//0: 금속
 	//1: 나무
 	//2: 플라스틱
